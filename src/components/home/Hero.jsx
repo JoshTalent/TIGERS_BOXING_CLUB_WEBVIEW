@@ -137,7 +137,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
 
       {/* Main Content Container */}
-      <div className="relative z-10 flex items-center justify-between h-full">
+      <div className="relative z-10 flex items-center justify-between h-full mt-20">
         {/* Left Content */}
         <div className="flex-1 max-w-4xl ml-8 lg:ml-20 xl:ml-32">
           <motion.div
