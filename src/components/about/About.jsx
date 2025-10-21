@@ -221,9 +221,9 @@ const AboutUs = () => {
               transition={{ duration: 0.8 }}
             >
               {[
-                "https://images.unsplash.com/photo-1608726677666-f0bb993edbe6?q=80&w=400&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1598970645731-13c0d557b3f6?q=80&w=400&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1602524811142-2a874d0cd3f2?q=80&w=400&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop",
+                "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2070&auto=format&fit=crop",
+                "https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop",
                 "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=400&auto=format&fit=crop"
               ].map((src, index) => (
                 <motion.img

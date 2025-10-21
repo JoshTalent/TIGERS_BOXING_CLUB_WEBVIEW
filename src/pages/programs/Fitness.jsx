@@ -75,7 +75,7 @@ const BoxingFitness = () => {
       desc: "Welcoming environment for all fitness levels"
     },
     {
-      src: "https://images.unsplash.com/photo-1554288204-389f7f23b7a0?q=80&w=870&auto=format&fit=crop",
+      src: "https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop",
       title: "Fun Atmosphere",
       desc: "Enjoyable workouts that feel like play"
     }
@@ -213,7 +213,7 @@ const BoxingFitness = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1554288204-389f7f23b7a0?q=80&w=870&auto=format&fit=crop"
+                src="https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop"
                 alt="Fun and engaging workout atmosphere"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />

@@ -70,21 +70,21 @@ const PrivateTraining = () => {
       specialty: "Technical Boxing & Fight Prep",
       experience: "15+ years",
       credentials: ["Former Pro Boxer", "National Champion", "Level 3 Coach"],
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
     },
     {
       name: "Sarah Chen",
       specialty: "Fitness & Weight Loss",
       experience: "12+ years",
       credentials: ["Sports Science Degree", "Nutrition Specialist", "HIIT Expert"],
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
     },
     {
       name: "David Rodriguez",
       specialty: "Beginner Development",
       experience: "8+ years",
       credentials: ["Youth Coach Certified", "Psychology Background", "Patience Expert"],
-      image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
     }
   ];
 
@@ -123,17 +123,17 @@ const PrivateTraining = () => {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1605559367730-09f62f3528e0?q=80&w=1170&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop",
       title: "Personalized Technique Work",
       desc: "One-on-one focus on perfecting form and movement"
     },
     {
-      src: "https://images.unsplash.com/photo-1605559367731-08e92f3528a1?q=80&w=870&auto=format&fit=crop",
+      src:"https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop",
       title: "Custom Fitness Training",
       desc: "Tailored conditioning for your specific goals"
     },
     {
-      src: "https://images.unsplash.com/photo-1605559367732-07d82f3527f2?q=80&w=870&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop",
       title: "Strategic Fight Preparation",
       desc: "Advanced training for competitive boxers"
     }
@@ -232,7 +232,7 @@ const PrivateTraining = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1605559367730-09f62f3528e0?q=80&w=1170&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
                 alt="Personalized one-on-one boxing training"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
@@ -251,7 +251,7 @@ const PrivateTraining = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1605559367731-08e92f3528a1?q=80&w=870&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
                 alt="Expert coach providing real-time feedback"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
@@ -264,7 +264,7 @@ const PrivateTraining = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1605559367732-07d82f3527f2?q=80&w=870&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
                 alt="Custom training plan execution"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />

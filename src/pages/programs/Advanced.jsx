@@ -171,12 +171,12 @@ const AdvancedCompetition = () => {
           <div className="flex-1 relative w-full h-[600px]">
             {[
               {
-                src: "https://images.unsplash.com/photo-1601050691818-8b4d27da7f0e?q=80&w=1170&auto=format&fit=crop",
+                src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2070&auto=format&fit=crop",
                 style: "absolute top-0 left-0 w-3/5 h-4/5 rounded-2xl shadow-2xl",
                 delay: 0
               },
               {
-                src: "https://images.unsplash.com/photo-1554288204-389f7f23b7a0?q=80&w=870&auto=format&fit=crop",
+                src: "https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crophttps://images.unsplash.com/photo-1554288204-389f7f23b7a0?q=80&w=870&auto=format&fit=crop",
                 style: "absolute top-16 right-4 w-2/5 h-2/5 rounded-2xl shadow-2xl",
                 delay: 0.3
               },

@@ -95,17 +95,17 @@ const KidsTeensBoxing = () => {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1599058917213-0a4aeb1e3e0d?q=80&w=1170&auto=format&fit=crop",
+      src: "https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop",
       title: "Fun Learning Environment",
       desc: "Kids enjoying structured boxing games and activities"
     },
     {
-      src: "https://images.unsplash.com/photo-1599058917765-5c6ef49b0c32?q=80&w=1170&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2070&auto=format&fit=crop",
       title: "Qualified Coach Supervision",
       desc: "Certified coaches ensuring proper technique and safety"
     },
     {
-      src: "https://images.unsplash.com/photo-1599058917215-4d0e3a24ff4f?q=80&w=870&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop",
       title: "Positive Social Interaction",
       desc: "Building friendships and teamwork skills"
     }
@@ -204,7 +204,7 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1599058917213-0a4aeb1e3e0d?q=80&w=1170&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
                 alt="Kids enjoying boxing training with coach"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
@@ -223,7 +223,7 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1599058917765-5c6ef49b0c32?q=80&w=1170&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
                 alt="Teens learning proper boxing technique"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
@@ -236,7 +236,7 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1599058917215-4d0e3a24ff4f?q=80&w=870&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
                 alt="Group of kids having fun while training"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
