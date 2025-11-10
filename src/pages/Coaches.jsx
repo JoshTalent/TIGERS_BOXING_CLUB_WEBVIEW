@@ -3,15 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Award, Clock, Users, Target, Heart, Star, Trophy, CheckCircle } from "lucide-react";
-
+import { Award, Clock, Users, Target, Heart, Star, Trophy, CheckCircle, Mail, Phone } from "lucide-react";
+import {  coach, josh } from "../assets";
 const coaches = [
   {
-    name: "Olivier The Coach",
-    role: "Head Boxing Coach & Founder",
+    name: "Sciver The Coach",
+    role: "Head Boxing Coach",
     expertise: "Boxing Fundamentals, Advanced Competition",
     specialties: ["Technical Boxing", "Fight Preparation", "Advanced Techniques"],
-    image: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=1170&auto=format&fit=crop",
+    image: coach,
     credentials: [
       "Former National Champion (2012-2015)",
       "Level 4 Certified Boxing Coach",
@@ -26,14 +26,16 @@ const coaches = [
       championsTrained: 25,
       yearsExperience: 15,
       successRate: "98%"
-    }
+    },
+    email: "sciver@gmail.com",
+    phone: "+250 788 123 456"
   },
   {
-    name: "Alice Kamali",
+    name: "Josue Ntwari",
     role: "Fitness & Conditioning Specialist",
     expertise: "Boxing for Fitness, Strength & Conditioning",
     specialties: ["Weight Loss Programs", "Cardio Conditioning", "Strength Training"],
-    image: "https://images.unsplash.com/photo-1619751296747-10dee6e1d46?q=80&w=1170&auto=format&fit=crop",
+    image: josh,
     credentials: [
       "Certified Personal Trainer (NASM)",
       "Sports Nutrition Specialist",
@@ -48,52 +50,10 @@ const coaches = [
       clientsTransformed: 300,
       yearsExperience: 8,
       successRate: "95%"
-    }
-  },
-  {
-    name: "Jean Claude",
-    role: "Youth Development Coach",
-    expertise: "Kids & Teens Boxing, Character Building",
-    specialties: ["Youth Technique", "Bullying Prevention", "Confidence Building"],
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1170&auto=format&fit=crop",
-    credentials: [
-      "Youth Coaching Certified",
-      "Child Psychology Background",
-      "10+ Years Youth Training",
-      "First Aid & Safety Certified"
-    ],
-    experience: "10+ years",
-    philosophy: "Every child deserves to feel strong and confident. I use boxing as a tool to teach discipline, respect, and resilience while ensuring a safe, positive environment for growth.",
-    bio: "Jean Claude has dedicated his career to youth development through sports. His patient, encouraging approach has helped hundreds of young people build confidence and learn valuable life skills.",
-    funFact: "Can make boxing mitts look like cartoon characters to engage younger students",
-    stats: {
-      kidsTrained: 500,
-      yearsExperience: 10,
-      successRate: "99%"
-    }
-  },
-  {
-    name: "Sophie Niyonsaba",
-    role: "Private Training Specialist",
-    expertise: "Private 1-on-1 Training, Technical Refinement",
-    specialties: ["Personalized Programs", "Technique Mastery", "Goal-Specific Training"],
-    image: "https://images.unsplash.com/photo-1554284126-4e48b7c172c5?q=80&w=1170&auto=format&fit=crop",
-    credentials: [
-      "Elite Performance Coach",
-      "Biomechanics Specialist",
-      "12+ Years Private Coaching",
-      "Multiple Certification Holder"
-    ],
-    experience: "12+ years",
-    philosophy: "Personalized attention unlocks potential. I believe in tailoring every session to the individual's goals, learning style, and pace to ensure maximum progress and satisfaction.",
-    bio: "Sophie's meticulous approach to technique and personalized training has made her the go-to coach for clients seeking specific results, from beginners to professional athletes.",
-    funFact: "Can identify and correct technique flaws just by listening to the sound of punches on the bag",
-    stats: {
-      privateClients: 200,
-      yearsExperience: 12,
-      successRate: "100%"
-    }
-  },
+    },
+    email: "ntwarijosue5@gmail.com",
+    phone: "+250 788 654 321"
+  }
 ];
 
 const Coaches = () => {
@@ -126,10 +86,10 @@ const Coaches = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               {[
-                { number: "4", label: "Expert Coaches" },
-                { number: "45+", label: "Years Combined Experience" },
-                { number: "1000+", label: "Members Trained" },
-                { number: "98%", label: "Success Rate" }
+                { number: "2", label: "Expert Coaches" },
+                { number: "23+", label: "Years Combined Experience" },
+                { number: "325+", label: "Members Trained" },
+                { number: "97%", label: "Success Rate" }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">{stat.number}</div>
@@ -159,58 +119,73 @@ const Coaches = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {coaches.map((coach, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 border border-gray-800"
+                className="group relative bg-gradient-to-br from-gray-900 to-black rounded-3xl overflow-hidden shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 border border-gray-800 hover:border-purple-500/50"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8 }}
               >
-                <div className="flex flex-col lg:flex-row">
-                  {/* Coach Image */}
-                  <div className="lg:w-2/5 relative">
+                {/* Background Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  {/* Header with Image and Basic Info */}
+                  <div className="relative h-80 overflow-hidden">
                     <img
                       src={coach.image}
                       alt={coach.name}
-                      className="w-full h-80 lg:h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 bg-purple-600 rounded-full p-2">
-                      <Star className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-
-                  {/* Coach Details */}
-                  <div className="lg:w-3/5 p-8">
-                    {/* Header */}
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">{coach.name}</h3>
-                      <p className="text-purple-400 font-semibold mb-3">{coach.role}</p>
-                      <div className="flex items-center gap-4 text-gray-400 text-sm">
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{coach.experience}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          <span>{coach.stats.successRate} Success Rate</span>
-                        </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                    
+                    {/* Badge */}
+                    <div className="absolute top-6 left-6">
+                      <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-full px-4 py-2 text-white font-semibold text-sm shadow-lg">
+                        {coach.role}
                       </div>
                     </div>
 
+                    {/* Stats Overlay */}
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1">{coach.name}</h3>
+                          <div className="flex items-center gap-4 text-sm text-gray-300">
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-4 h-4 text-purple-400" />
+                              <span>{coach.experience}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 text-yellow-400" />
+                              <span>{coach.stats.successRate} Success</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-purple-400">{coach.stats.championsTrained || coach.stats.clientsTransformed}+</div>
+                          <div className="text-gray-400 text-xs">Trained</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-8">
                     {/* Specialties */}
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                        <Target className="w-4 h-4 text-purple-400" />
-                        Specialties
+                        <Target className="w-5 h-5 text-purple-400" />
+                        Areas of Expertise
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {coach.specialties.map((specialty, idx) => (
                           <span
                             key={idx}
-                            className="bg-purple-900 text-purple-300 px-3 py-1 rounded-full text-sm border border-purple-700"
+                            className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 text-purple-300 px-3 py-2 rounded-xl text-sm border border-purple-700/50 backdrop-blur-sm"
                           >
                             {specialty}
                           </span>
@@ -218,15 +193,26 @@ const Coaches = () => {
                       </div>
                     </div>
 
+                    {/* Philosophy */}
+                    <div className="mb-6">
+                      <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+                        <Heart className="w-5 h-5 text-purple-400" />
+                        Coaching Philosophy
+                      </h4>
+                      <p className="text-gray-300 text-sm leading-relaxed bg-gray-800/50 rounded-xl p-4 border border-gray-700">
+                        "{coach.philosophy}"
+                      </p>
+                    </div>
+
                     {/* Credentials */}
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                        <Award className="w-4 h-4 text-purple-400" />
-                        Credentials & Experience
+                        <Award className="w-5 h-5 text-purple-400" />
+                        Credentials
                       </h4>
-                      <div className="space-y-2">
-                        {coach.credentials.map((credential, idx) => (
-                          <div key={idx} className="flex items-center gap-3 text-gray-300">
+                      <div className="grid grid-cols-1 gap-3">
+                        {coach.credentials.slice(0, 2).map((credential, idx) => (
+                          <div key={idx} className="flex items-center gap-3 text-gray-300 bg-gray-800/30 rounded-lg p-3 border border-gray-700/50">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span className="text-sm">{credential}</span>
                           </div>
@@ -234,42 +220,21 @@ const Coaches = () => {
                       </div>
                     </div>
 
-                    {/* Coaching Philosophy */}
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                        <Heart className="w-4 h-4 text-purple-400" />
-                        Coaching Philosophy
-                      </h4>
-                      <p className="text-gray-300 text-sm leading-relaxed italic">
-                        "{coach.philosophy}"
-                      </p>
-                    </div>
-
-                    {/* Fun Fact */}
-                    <div className="mb-6 p-4 bg-gray-800 rounded-lg">
-                      <h4 className="text-white font-semibold mb-2 text-sm">🎯 Fun Fact</h4>
-                      <p className="text-gray-300 text-sm">{coach.funFact}</p>
-                    </div>
-
-                    {/* Stats & CTA */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex gap-6 text-center">
-                        <div>
-                          <div className="text-xl font-bold text-white">{coach.stats.championsTrained}+</div>
-                          <div className="text-gray-400 text-xs">Trained</div>
+                    {/* Contact & CTA */}
+                    <div className="flex items-center justify-between pt-6 border-t border-gray-800">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors cursor-pointer">
+                          <Mail className="w-4 h-4" />
+                          <span className="text-sm">Email</span>
                         </div>
-                        <div>
-                          <div className="text-xl font-bold text-white">{coach.stats.yearsExperience}</div>
-                          <div className="text-gray-400 text-xs">Experience</div>
-                        </div>
-                        <div>
-                          <div className="text-xl font-bold text-white">{coach.stats.successRate}</div>
-                          <div className="text-gray-400 text-xs">Success</div>
+                        <div className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors cursor-pointer">
+                          <Phone className="w-4 h-4" />
+                          <span className="text-sm">Call</span>
                         </div>
                       </div>
                       
-                      <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-                        Book with {coach.name.split(' ')[0]}
+                      <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                        Book Session
                       </button>
                     </div>
                   </div>
@@ -315,12 +280,13 @@ const Coaches = () => {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-900 p-8 rounded-2xl text-center border border-gray-800"
+                className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl text-center border border-gray-800 hover:border-purple-500/50 transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -5 }}
               >
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -348,10 +314,10 @@ const Coaches = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
                 Book Your First Session
               </button>
-              <button className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300">
+              <button className="border-2 border-purple-500 text-purple-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300">
                 View Class Schedule
               </button>
             </div>

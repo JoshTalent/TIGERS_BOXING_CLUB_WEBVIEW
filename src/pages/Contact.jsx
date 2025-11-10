@@ -289,6 +289,7 @@ const Contact = () => {
                         className="w-full bg-gray-800 text-white px-4 py-3 rounded-lg border border-gray-700 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       >
                         <option value="">Select a subject</option>
+                        <option value="support">Support</option>
                         <option value="membership">Membership Inquiry</option>
                         <option value="trial-class">Free Trial Class</option>
                         <option value="private-training">Private Training</option>

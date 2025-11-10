@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Music, Heart, Zap, Users, Trophy, Sparkles } from "lucide-react";
+import { fitness } from "../../assets";
 
 const BoxingFitness = () => {
   const benefits = [
@@ -70,7 +71,7 @@ const BoxingFitness = () => {
       desc: "High-energy classes with motivating music"
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1672791843132-cea1902ad66b?q=80&w=870&auto=format&fit=crop",
+      src: fitness,
       title: "Non-Intimidating",
       desc: "Welcoming environment for all fitness levels"
     },
@@ -181,7 +182,7 @@ const BoxingFitness = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=1170&auto=format&fit=crop"
+                src= {fitness}
                 alt="Group fitness class with energetic music"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />

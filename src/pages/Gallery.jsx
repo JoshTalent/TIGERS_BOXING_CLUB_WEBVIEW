@@ -3,7 +3,19 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Play, X, ChevronLeft, ChevronRight, Users, Trophy, Calendar, Star, Heart } from "lucide-react";
+import {
+  Play,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Users,
+  Trophy,
+  Calendar,
+  Star,
+  Heart,
+} from "lucide-react";
+import { image1, image2, image3, image4 ,image5,image6 ,image7 ,image8, image11,  video1 , video2 } from "../assets";
+import { video } from "framer-motion/client";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -25,29 +37,30 @@ const Gallery = () => {
       id: 1,
       type: "image",
       category: "class-action",
-      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1170&auto=format&fit=crop",
+      src: image1,
       title: "Morning Boxing Fundamentals",
-      description: "Members perfecting their technique in our 6 AM fundamentals class",
-      date: "2024-01-15"
+      description:
+        "Members perfecting their technique in our 6 AM fundamentals class",
+      date: "2024-01-15",
     },
     {
       id: 2,
       type: "video",
       category: "class-action",
-      src: "https://player.vimeo.com/video/824804225?h=6c8d5d5a5f",
-      thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1170&auto=format&fit=crop",
+      src: video1,
+      thumbnail: image3,
       title: "High-Energy Fitness Class",
       description: "Boxing for Fitness class in full swing with Coach Alice",
-      date: "2024-01-10"
+      date: "2024-01-10",
     },
     {
       id: 3,
       type: "image",
       category: "class-action",
-      src: "https://images.unsplash.com/photo-1599058917765-5c6ef49b0c32?q=80&w=1169&auto=format&fit=crop",
+      src: image2,
       title: "Kids Boxing Session",
       description: "Young champions learning discipline and technique",
-      date: "2024-01-12"
+      date: "2024-01-12",
     },
 
     // Facility & Equipment
@@ -55,29 +68,30 @@ const Gallery = () => {
       id: 4,
       type: "image",
       category: "facility",
-      src: "https://images.unsplash.com/photo-1598966739473-0706b3c92333?q=80&w=1170&auto=format&fit=crop",
+      src: image3,
       title: "Professional Boxing Ring",
       description: "Our competition-grade ring for sparring and training",
-      date: "2024-01-08"
+      date: "2024-01-08",
     },
     {
       id: 5,
       type: "image",
       category: "facility",
-      src: "https://images.unsplash.com/photo-1607083202346-1f5360c04c9f?q=80&w=1170&auto=format&fit=crop",
+      src: image4,
       title: "Heavy Bag Area",
       description: "20+ premium bags including aqua and traditional leather",
-      date: "2024-01-05"
+      date: "2024-01-05",
     },
     {
       id: 6,
       type: "video",
       category: "facility",
-      src: "https://player.vimeo.com/video/824804225?h=6c8d5d5a5f",
-      thumbnail: "https://images.unsplash.com/photo-1613742063383-8b3b9c2c7f0b?q=80&w=1170&auto=format&fit=crop",
+      src: video2,
+      thumbnail:
+        image7,
       title: "Facility Virtual Tour",
       description: "Walk through our state-of-the-art training facility",
-      date: "2024-01-03"
+      date: "2024-01-03",
     },
 
     // Member Success Stories
@@ -85,66 +99,39 @@ const Gallery = () => {
       id: 7,
       type: "image",
       category: "success",
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1170&auto=format&fit=crop",
+      src:image11,
       title: "Marie's 6-Month Transformation",
       description: "Lost 15kg and gained incredible confidence",
-      date: "2024-01-18"
+      date: "2024-01-18",
+    },
+    {
+      id: 7,
+      type: "image",
+      category: "success",
+      src:image5,
+      title: "Marie's 6-Month Transformation",
+      description: "Lost 15kg and gained incredible confidence",
+      date: "2024-01-18",
     },
     {
       id: 8,
       type: "video",
       category: "success",
       src: "https://player.vimeo.com/video/824804225?h=6c8d5d5a5f",
-      thumbnail: "https://images.unsplash.com/photo-1534367507877-0edd93bd013b?q=80&w=1170&auto=format&fit=crop",
+      thumbnail:
+      image8,
       title: "John's Journey to National Competition",
       description: "From beginner to national competitor in 18 months",
-      date: "2024-01-14"
+      date: "2024-01-14",
     },
 
-    // Competition Wins
-    {
-      id: 9,
-      type: "image",
-      category: "competition",
-      src: "https://images.unsplash.com/photo-1626248801371-04ab3f18d877?q=80&w=1170&auto=format&fit=crop",
-      title: "Regional Championship Victory",
-      description: "Team Tiger dominates the regional boxing championships",
-      date: "2023-12-20"
-    },
-    {
-      id: 10,
-      type: "image",
-      category: "competition",
-      src: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=1170&auto=format&fit=crop",
-      title: "Gold Medal Celebration",
-      description: "Celebrating another gold medal for our youth team",
-      date: "2023-12-15"
-    },
-
-    // Social Events
-    {
-      id: 11,
-      type: "image",
-      category: "social",
-      src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1220&auto=format&fit=crop",
-      title: "Annual Club Barbecue",
-      description: "Members and families enjoying our summer barbecue",
-      date: "2023-11-25"
-    },
-    {
-      id: 12,
-      type: "image",
-      category: "social",
-      src: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1171&auto=format&fit=crop",
-      title: "Fight Night Watch Party",
-      description: "Community gathering for major boxing events",
-      date: "2023-11-10"
-    },
+ 
   ];
 
-  const filteredMedia = selectedCategory === "All" 
-    ? galleryMedia 
-    : galleryMedia.filter(media => media.category === selectedCategory);
+  const filteredMedia =
+    selectedCategory === "All"
+      ? galleryMedia
+      : galleryMedia.filter((media) => media.category === selectedCategory);
 
   const openMedia = (media, index) => {
     setSelectedMedia(media);
@@ -157,10 +144,11 @@ const Gallery = () => {
 
   const navigateMedia = (direction) => {
     let newIndex;
-    if (direction === 'next') {
+    if (direction === "next") {
       newIndex = (currentIndex + 1) % filteredMedia.length;
     } else {
-      newIndex = (currentIndex - 1 + filteredMedia.length) % filteredMedia.length;
+      newIndex =
+        (currentIndex - 1 + filteredMedia.length) % filteredMedia.length;
     }
     setCurrentIndex(newIndex);
     setSelectedMedia(filteredMedia[newIndex]);
@@ -180,13 +168,17 @@ const Gallery = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Gallery</span>
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                Gallery
+              </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Experience the energy, community, and success stories that make Tiger Boxing Club special. 
-              Browse through our collection of memorable moments and achievements.
+              Experience the energy, community, and success stories that make
+              Tiger Boxing Club special. Browse through our collection of
+              memorable moments and achievements.
             </p>
-            
+
             {/* Gallery Stats */}
             <motion.div
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
@@ -198,10 +190,12 @@ const Gallery = () => {
                 { number: "200+", label: "Photos & Videos" },
                 { number: "6", label: "Categories" },
                 { number: "50+", label: "Success Stories" },
-                { number: "24/7", label: "Updated Gallery" }
+                { number: "24/7", label: "Updated Gallery" },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">{stat.number}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
+                    {stat.number}
+                  </div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -224,9 +218,14 @@ const Gallery = () => {
               return (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id === "all" ? "All" : category.id)}
+                  onClick={() =>
+                    setSelectedCategory(
+                      category.id === "all" ? "All" : category.id
+                    )
+                  }
                   className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                    selectedCategory === (category.id === "all" ? "All" : category.id)
+                    selectedCategory ===
+                    (category.id === "all" ? "All" : category.id)
                       ? "bg-purple-600 text-white shadow-lg shadow-purple-500/30"
                       : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
                   }`}
@@ -266,15 +265,19 @@ const Gallery = () => {
                       alt={media.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    
+
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        <h3 className="text-lg font-bold mb-2">{media.title}</h3>
-                        <p className="text-gray-300 text-sm mb-3">{media.description}</p>
+                        <h3 className="text-lg font-bold mb-2">
+                          {media.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm mb-3">
+                          {media.description}
+                        </p>
                         <div className="flex items-center justify-between">
                           <span className="text-purple-400 text-sm font-semibold capitalize">
-                            {media.category.replace('-', ' ')}
+                            {media.category.replace("-", " ")}
                           </span>
                           {media.type === "video" && (
                             <div className="flex items-center gap-1 text-sm text-gray-300">
@@ -289,7 +292,7 @@ const Gallery = () => {
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
                       <span className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
-                        {media.category.replace('-', ' ')}
+                        {media.category.replace("-", " ")}
                       </span>
                     </div>
 
@@ -313,7 +316,9 @@ const Gallery = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <p className="text-gray-400 text-xl">No media found for this category.</p>
+              <p className="text-gray-400 text-xl">
+                No media found for this category.
+              </p>
               <button
                 onClick={() => setSelectedCategory("All")}
                 className="mt-4 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-all duration-300"
@@ -347,13 +352,13 @@ const Gallery = () => {
               {filteredMedia.length > 1 && (
                 <>
                   <button
-                    onClick={() => navigateMedia('prev')}
+                    onClick={() => navigateMedia("prev")}
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-purple-600 transition-all duration-200 z-10"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   <button
-                    onClick={() => navigateMedia('next')}
+                    onClick={() => navigateMedia("next")}
                     className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-purple-600 transition-all duration-200 z-10"
                   >
                     <ChevronRight className="w-6 h-6" />
@@ -388,11 +393,19 @@ const Gallery = () => {
 
                 {/* Media Info */}
                 <div className="p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2">{selectedMedia.title}</h3>
-                  <p className="text-gray-300 mb-4">{selectedMedia.description}</p>
+                  <h3 className="text-2xl font-bold mb-2">
+                    {selectedMedia.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4">
+                    {selectedMedia.description}
+                  </p>
                   <div className="flex items-center justify-between text-sm text-gray-400">
-                    <span className="capitalize">{selectedMedia.category.replace('-', ' ')}</span>
-                    <span>{new Date(selectedMedia.date).toLocaleDateString()}</span>
+                    <span className="capitalize">
+                      {selectedMedia.category.replace("-", " ")}
+                    </span>
+                    <span>
+                      {new Date(selectedMedia.date).toLocaleDateString()}
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -420,10 +433,11 @@ const Gallery = () => {
               Ready to Create Your Own Success Story?
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Join our community and become part of the Tiger Boxing Club legacy. 
-              Your transformation could be our next featured success story!
+              Join our community and become part of the Tiger Boxing Club
+              legacy. Your transformation could be our next featured success
+              story!
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Start Your Journey

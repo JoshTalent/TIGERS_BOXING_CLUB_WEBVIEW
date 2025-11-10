@@ -3,112 +3,160 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { Shield, Heart, Target, Users, Star, Award, Clock, CheckCircle } from "lucide-react";
+import {
+  Shield,
+  Heart,
+  Target,
+  Users,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+} from "lucide-react";
+import { image12, image9, image1, image13, image5, image2 , image15  ,image16, image14 } from "../../assets";
 
 const KidsTeensBoxing = () => {
   const ageGroups = [
     {
       range: "6-8 Years",
       title: "Little Champions",
-      focus: "Fundamental movement skills, basic coordination, and fun introduction to boxing",
-      features: ["Fun games & activities", "Basic stance & footwork", "Coordination drills", "Social skills development"],
-      icon: Star
+      focus:
+        "Fundamental movement skills, basic coordination, and fun introduction to boxing",
+      features: [
+        "Fun games & activities",
+        "Basic stance & footwork",
+        "Coordination drills",
+        "Social skills development",
+      ],
+      icon: Star,
     },
     {
       range: "9-12 Years",
       title: "Junior Warriors",
-      focus: "Technical foundation, discipline development, and confidence building",
-      features: ["Proper punching technique", "Defensive movements", "Fitness fundamentals", "Teamwork exercises"],
-      icon: Target
+      focus:
+        "Technical foundation, discipline development, and confidence building",
+      features: [
+        "Proper punching technique",
+        "Defensive movements",
+        "Fitness fundamentals",
+        "Teamwork exercises",
+      ],
+      icon: Target,
     },
     {
       range: "13-17 Years",
       title: "Future Champions",
-      focus: "Advanced techniques, physical conditioning, and leadership development",
-      features: ["Advanced combinations", "Strength & conditioning", "Competition preparation", "Leadership skills"],
-      icon: Award
-    }
+      focus:
+        "Advanced techniques, physical conditioning, and leadership development",
+      features: [
+        "Advanced combinations",
+        "Strength & conditioning",
+        "Competition preparation",
+        "Leadership skills",
+      ],
+      icon: Award,
+    },
   ];
 
   const benefits = [
     {
       icon: Shield,
       title: "Bullying Prevention",
-      desc: "Build confidence and awareness to handle challenging situations"
+      desc: "Build confidence and awareness to handle challenging situations",
     },
     {
       icon: Heart,
       title: "Discipline & Focus",
-      desc: "Develop self-control and concentration through structured training"
+      desc: "Develop self-control and concentration through structured training",
     },
     {
       icon: Target,
       title: "Confidence Building",
-      desc: "Achieve milestones and build self-esteem in a supportive environment"
+      desc: "Achieve milestones and build self-esteem in a supportive environment",
     },
     {
       icon: Users,
       title: "Social Skills",
-      desc: "Learn teamwork, respect, and sportsmanship with peers"
+      desc: "Learn teamwork, respect, and sportsmanship with peers",
     },
     {
       icon: Star,
       title: "Fun & Engagement",
-      desc: "Enjoyable activities that make fitness something to look forward to"
+      desc: "Enjoyable activities that make fitness something to look forward to",
     },
     {
       icon: Award,
       title: "Skill Development",
-      desc: "Learn proper boxing techniques in a safe, age-appropriate way"
-    }
+      desc: "Learn proper boxing techniques in a safe, age-appropriate way",
+    },
   ];
 
   const safetyFeatures = [
     {
       title: "Certified Coaches",
       description: "All coaches are certified in youth training and first aid",
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       title: "Safety-First Equipment",
       description: "Age-appropriate gloves, headgear, and protective gear",
-      icon: Shield
+      icon: Shield,
     },
     {
       title: "Structured Curriculum",
       description: "Progressive learning designed for each age group",
-      icon: Target
+      icon: Target,
     },
     {
       title: "Positive Environment",
       description: "Zero tolerance for bullying, focused on encouragement",
-      icon: Heart
-    }
+      icon: Heart,
+    },
   ];
 
   const programStats = [
     { number: "100%", label: "Safety-Focused Training" },
     { number: "5:1", label: "Student to Coach Ratio" },
     { number: "10+", label: "Certified Youth Coaches" },
-    { number: "0", label: "Tolerance for Bullying" }
+    { number: "0", label: "Tolerance for Bullying" },
   ];
 
   const galleryImages = [
     {
-      src: "https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop",
-      title: "Fun Learning Environment",
-      desc: "Kids enjoying structured boxing games and activities"
+      src: image12,
+      title: "Amani ",
+      desc: "Kids enjoying structured boxing games and activities",
     },
     {
-      src: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2070&auto=format&fit=crop",
-      title: "Qualified Coach Supervision",
-      desc: "Certified coaches ensuring proper technique and safety"
+      src: image9,
+      title: "C. ",
+      desc: "Certified coaches ensuring proper technique and safety",
     },
     {
-      src: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop",
+      src: image5,
       title: "Positive Social Interaction",
-      desc: "Building friendships and teamwork skills"
-    }
+      desc: "Building friendships and teamwork skills",
+    },
+    {
+      src: image2,
+      title: "Positive Social Interaction",
+      desc: "Building friendships and teamwork skills",
+    },
+    {
+      src: image1,
+      title: "Positive Social Interaction",
+      desc: "Building friendships and teamwork skills",
+    },
+    {
+      src: image13,
+      title: "Positive Social Interaction",
+      desc: "Building friendships and teamwork skills",
+    },
+    {
+      src: image14,
+      title: "Positive Social Interaction",
+      desc: "Building friendships and teamwork skills",
+    },
   ];
 
   return (
@@ -135,9 +183,11 @@ const KidsTeensBoxing = () => {
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-10 bg-blue-500 rounded-full"></div>
-                <span className="text-blue-400 font-semibold tracking-wider">SAFE • FUN • EDUCATIONAL</span>
+                <span className="text-blue-400 font-semibold tracking-wider">
+                  SAFE • FUN • EDUCATIONAL
+                </span>
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 Kids & Teens
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 block">
@@ -150,12 +200,17 @@ const KidsTeensBoxing = () => {
               className="text-xl text-gray-300 leading-relaxed"
               variants={{
                 hidden: { x: -30, opacity: 0 },
-                visible: { x: 0, opacity: 1, transition: { delay: 0.3, duration: 0.8 } },
+                visible: {
+                  x: 0,
+                  opacity: 1,
+                  transition: { delay: 0.3, duration: 0.8 },
+                },
               }}
             >
-              <strong>Age-appropriate boxing training</strong> designed to build confidence, discipline, and physical fitness 
-              while providing essential skills for bullying prevention. Our certified coaches create a safe, positive environment 
-              where young athletes thrive.
+              <strong>Age-appropriate boxing training</strong> designed to build
+              confidence, discipline, and physical fitness while providing
+              essential skills for bullying prevention. Our certified coaches
+              create a safe, positive environment where young athletes thrive.
             </motion.p>
 
             {/* Parent Reassurance Features */}
@@ -163,16 +218,23 @@ const KidsTeensBoxing = () => {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-6"
               variants={{
                 hidden: { y: 30, opacity: 0 },
-                visible: { y: 0, opacity: 1, transition: { delay: 0.6, duration: 0.8 } },
+                visible: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { delay: 0.6, duration: 0.8 },
+                },
               }}
             >
               {[
                 "🛡️ Certified Safety-First Coaches",
-                "🎯 Age-Appropriate Training", 
+                "🎯 Age-Appropriate Training",
                 "🌟 Bullying Prevention Focus",
-                "🤝 Positive Social Environment"
+                "🤝 Positive Social Environment",
               ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 text-gray-300">
+                <div
+                  key={index}
+                  className="flex items-center gap-3 text-gray-300"
+                >
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   {feature}
                 </div>
@@ -183,7 +245,11 @@ const KidsTeensBoxing = () => {
               className="flex flex-wrap gap-4"
               variants={{
                 hidden: { y: 30, opacity: 0 },
-                visible: { y: 0, opacity: 1, transition: { delay: 0.8, duration: 0.8 } },
+                visible: {
+                  y: 0,
+                  opacity: 1,
+                  transition: { delay: 0.8, duration: 0.8 },
+                },
               }}
             >
               <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30">
@@ -204,18 +270,20 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
+                src= {image16}
                 alt="Kids enjoying boxing training with coach"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-3">
                 <div className="flex items-center gap-2 text-white">
                   <Shield className="w-4 h-4 text-blue-400" />
-                  <span className="text-sm font-semibold">Safe & Supervised</span>
+                  <span className="text-sm font-semibold">
+                    Safe & Supervised
+                  </span>
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               className="absolute top-16 right-4 w-2/5 h-2/5 rounded-2xl overflow-hidden shadow-2xl"
               initial={{ x: 50, opacity: 0, rotate: -5 }}
@@ -223,12 +291,12 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
+                src={image15}
                 alt="Teens learning proper boxing technique"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
             </motion.div>
-            
+
             <motion.div
               className="absolute bottom-8 left-1/4 w-2/5 h-2/5 rounded-2xl overflow-hidden shadow-2xl"
               initial={{ y: 50, opacity: 0 }}
@@ -244,6 +312,55 @@ const KidsTeensBoxing = () => {
                 <Star className="w-4 h-4 text-white" />
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Enhanced Gallery Section */}
+      <section className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              See Our <span className="text-blue-400">Young Champions</span>
+            </h2>
+            <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Watch as children build confidence, make friends, and develop
+              skills in our supportive environment
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {galleryImages.map((item, index) => (
+              <motion.div
+                key={index}
+                className="group cursor-pointer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl h-80">
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-gray-300 text-sm">{item.desc}</p>
+                  </div>
+                  <div className="absolute top-4 right-4 bg-blue-600 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Star className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -286,7 +403,8 @@ const KidsTeensBoxing = () => {
             </h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Age-appropriate programs that grow with your child, from fundamental skills to advanced techniques
+              Age-appropriate programs that grow with your child, from
+              fundamental skills to advanced techniques
             </p>
           </motion.div>
 
@@ -317,7 +435,10 @@ const KidsTeensBoxing = () => {
 
                 <div className="space-y-3">
                   {group.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3 text-gray-300">
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </div>
@@ -363,9 +484,7 @@ const KidsTeensBoxing = () => {
                 <h3 className="text-xl font-bold text-white mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {benefit.desc}
-                </p>
+                <p className="text-gray-400 leading-relaxed">{benefit.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -382,11 +501,13 @@ const KidsTeensBoxing = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Your Child's Safety is Our <span className="text-blue-400">Priority</span>
+              Your Child's Safety is Our{" "}
+              <span className="text-blue-400">Priority</span>
             </h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We understand your concerns and have built our program around safety and positive development
+              We understand your concerns and have built our program around
+              safety and positive development
             </p>
           </motion.div>
 
@@ -429,63 +550,18 @@ const KidsTeensBoxing = () => {
               </div>
               <div>
                 <strong className="text-white">Progress Reports</strong>
-                <p className="text-sm">Regular updates on your child's development</p>
+                <p className="text-sm">
+                  Regular updates on your child's development
+                </p>
               </div>
               <div>
                 <strong className="text-white">Flexible Scheduling</strong>
-                <p className="text-sm">Classes that work with your family's routine</p>
+                <p className="text-sm">
+                  Classes that work with your family's routine
+                </p>
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Enhanced Gallery Section */}
-      <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              See Our <span className="text-blue-400">Young Champions</span>
-            </h2>
-            <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Watch as children build confidence, make friends, and develop skills in our supportive environment
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {galleryImages.map((item, index) => (
-              <motion.div
-                key={index}
-                className="group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
-              >
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl h-80">
-                  <img
-                    src={item.src}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-gray-300 text-sm">{item.desc}</p>
-                  </div>
-                  <div className="absolute top-4 right-4 bg-blue-600 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Star className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -501,10 +577,11 @@ const KidsTeensBoxing = () => {
               Ready to Empower Your Child?
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Give your child the gift of confidence, discipline, and fun through our carefully designed boxing program. 
-              Join our family of young champions today!
+              Give your child the gift of confidence, discipline, and fun
+              through our carefully designed boxing program. Join our family of
+              young champions today!
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Book Free Trial Class
@@ -513,9 +590,10 @@ const KidsTeensBoxing = () => {
                 Download Parent Guide
               </button>
             </div>
-            
+
             <p className="text-gray-500 mt-6 text-sm">
-              🛡️ Certified Coaches • 🎯 Age-Appropriate • 🤝 Anti-Bullying Focus • 🌟 Fun & Safe Environment
+              🛡️ Certified Coaches • 🎯 Age-Appropriate • 🤝 Anti-Bullying Focus
+              • 🌟 Fun & Safe Environment
             </p>
           </motion.div>
         </div>

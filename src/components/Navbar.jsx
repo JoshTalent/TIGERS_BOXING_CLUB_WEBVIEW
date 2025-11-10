@@ -36,12 +36,6 @@ const Navbar = () => {
       description: "Master the basics"
     },
     { 
-      name: "Advanced Competition", 
-      to: "/programs/advanced",
-      icon: Trophy,
-      description: "Elite training"
-    },
-    { 
       name: "Boxing for Fitness", 
       to: "/programs/fitness",
       icon: Users,
@@ -53,20 +47,13 @@ const Navbar = () => {
       icon: Users,
       description: "Youth development"
     },
-    { 
-      name: "Private 1-on-1 Training", 
-      to: "/programs/private",
-      icon: Star,
-      description: "Personalized coaching"
-    },
+   
   ];
 
   const moreMenu = [
-    { name: "Schedule & Pricing", to: "/schedule", icon: Clock },
     { name: "Our Coaches", to: "/coaches", icon: Users },
     { name: "Gallery", to: "/gallery", icon: Trophy },
     { name: "Blog", to: "/blog", icon: Dumbbell },
-    { name: "Contact", to: "/contact", icon: Phone },
   ];
 
   const isActiveLink = (path) => {

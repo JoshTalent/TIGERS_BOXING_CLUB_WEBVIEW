@@ -3,26 +3,27 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mouse, ArrowRight, Trophy, Users, Target, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import { image1 , image12 ,image2} from "../../assets";
 
-// Enhanced slides with overlay content
+// Enhanced slides with imported background images
 const slides = [
   {
     id: 1,
-    bg: "bg-[url('https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop')]",
+    bg: image12, // Your imported image
     title: "Elite Training Facility",
     subtitle: "World-Class Boxing Environment",
     stats: { value: "15+", label: "National Champions" }
   },
   {
     id: 2,
-    bg: "bg-[url('https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop')]",
+    bg: image1, // Your imported image
     title: "Professional Coaching",
     subtitle: "Expert Guidance & Mentorship",
     stats: { value: "12", label: "Years Experience" }
   },
   {
     id: 3,
-    bg: "bg-[url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=2070&auto=format&fit=crop')]",
+    bg: image2, // Your imported image
     title: "Championship Results",
     subtitle: "Proven Track Record of Success",
     stats: { value: "50+", label: "Competition Wins" }
@@ -111,8 +112,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black text-white">
-      {/* Enhanced Background Slides with Parallax */}
+    <section className="relative h-screen w-full overflow-hidden bg-black text-white pt-20">
+      {/* Enhanced Background Slides with Imported Images */}
       <AnimatePresence mode="wait">
         {slides.map((slide, idx) =>
           idx === current ? (
@@ -122,19 +123,25 @@ const Hero = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.05 }}
               transition={{ duration: 1.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className={`absolute inset-0 ${slide.bg} bg-cover bg-center bg-no-repeat`}
+              className="absolute inset-0"
             >
-              {/* Gradient Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 to-black/80" />
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${slide.bg})` }}
+              />
+              
+              {/* Lighter Gradient Overlays for Better Visibility */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-900/5 to-black/40" />
             </motion.div>
           ) : null
         )}
       </AnimatePresence>
 
-      {/* Animated Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+      {/* Subtle Grid Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
 
       {/* Main Content Container */}
       <div className="relative z-10 flex items-center justify-between h-full mt-20">
@@ -151,10 +158,10 @@ const Hero = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, type: "spring" }}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-3 backdrop-blur-sm"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600/30 to-pink-600/30 border border-purple-500/50 rounded-full px-6 py-3 backdrop-blur-sm"
             >
               <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-purple-300 tracking-wide">
+              <span className="text-sm font-semibold text-purple-200 tracking-wide">
                 RWANDA'S PREMIER BOXING CLUB
               </span>
             </motion.div>
@@ -171,7 +178,7 @@ const Hero = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
                   BOXING
                 </span><br />
-                <span className="text-white">CLUB</span>
+                <span className="text-white drop-shadow-2xl">CLUB</span>
               </motion.h1>
 
               {/* Animated Tagline */}
@@ -179,7 +186,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 1 }}
-                className="text-xl md:text-2xl text-gray-300 font-light"
+                className="text-xl md:text-2xl text-gray-200 font-light drop-shadow-lg"
               >
                 <AdvancedTypingText
                   texts={[
@@ -198,9 +205,9 @@ const Hero = () => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
-              className="max-w-2xl text-lg md:text-xl text-gray-300 leading-relaxed font-light"
+              className="max-w-2xl text-lg md:text-xl text-gray-200 leading-relaxed font-medium drop-shadow-lg"
             >
-              At <span className="text-purple-400 font-semibold">Tiger Boxing Club</span>,
+              At <span className="text-purple-300 font-semibold">Tiger Boxing Club</span>,
               we transform ambition into achievement. Through world-class training, 
               elite coaching, and unwavering discipline, we forge champions who dominate 
               in the ring and inspire beyond it.
@@ -219,12 +226,12 @@ const Hero = () => {
                 { icon: Target, value: 50, label: "Wins" },
                 { icon: Clock, value: 12, label: "Years" }
               ].map((stat, idx) => (
-                <div key={idx} className="text-center">
-                  <stat.icon className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-white">
+                <div key={idx} className="text-center backdrop-blur-sm bg-black/30 rounded-lg p-4 min-w-[100px]">
+                  <stat.icon className="w-6 h-6 text-purple-300 mx-auto mb-2 drop-shadow-lg" />
+                  <div className="text-2xl font-bold text-white drop-shadow-lg">
                     <Counter end={stat.value} />
                   </div>
-                  <div className="text-xs text-gray-400 uppercase tracking-wide">
+                  <div className="text-xs text-gray-300 uppercase tracking-wide font-semibold">
                     {stat.label}
                   </div>
                 </div>
@@ -240,10 +247,10 @@ const Hero = () => {
             >
               <Link
                 to="/join"
-                className="group relative px-12 py-4 text-lg font-bold rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 transform hover:scale-105 overflow-hidden"
+                className="group relative px-12 py-4 text-lg font-bold rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-500 transform hover:scale-105 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                <span className="relative flex items-center gap-3">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <span className="relative flex items-center gap-3 drop-shadow-lg">
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
@@ -251,9 +258,9 @@ const Hero = () => {
               
               <Link
                 to="/contact"
-                className="group px-12 py-4 text-lg font-bold rounded-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-500 transform hover:scale-105 backdrop-blur-sm"
+                className="group px-12 py-4 text-lg font-bold rounded-full border-2 border-purple-400 text-purple-300 hover:bg-purple-500 hover:text-white transition-all duration-500 transform hover:scale-105 backdrop-blur-sm bg-black/30"
               >
-                <span className="flex items-center gap-3">
+                <span className="flex items-center gap-3 drop-shadow-lg">
                   Free Trial Session
                   <Target className="w-5 h-5" />
                 </span>
@@ -278,17 +285,17 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
               className="text-right space-y-6"
             >
-              <div className="bg-gradient-to-l from-purple-600/20 to-transparent p-8 rounded-2xl backdrop-blur-sm border border-purple-500/20">
-                <h3 className="text-3xl font-bold text-white mb-2">
+              <div className="bg-gradient-to-l from-purple-600/30 to-transparent p-8 rounded-2xl backdrop-blur-sm border border-purple-400/30 shadow-2xl">
+                <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-lg">
                   {slides[current].title}
                 </h3>
-                <p className="text-purple-300 text-lg mb-4">
+                <p className="text-purple-200 text-lg mb-4 drop-shadow-lg">
                   {slides[current].subtitle}
                 </p>
-                <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 drop-shadow-lg">
                   {slides[current].stats.value}
                 </div>
-                <div className="text-gray-400 uppercase tracking-wider text-sm">
+                <div className="text-gray-300 uppercase tracking-wider text-sm font-semibold">
                   {slides[current].stats.label}
                 </div>
               </div>
@@ -307,11 +314,11 @@ const Hero = () => {
               onClick={() => setCurrent(idx)}
               className={`group relative w-4 h-4 rounded-full transition-all duration-500 ${
                 current === idx
-                  ? "bg-gradient-to-r from-purple-500 to-pink-500 scale-125 shadow-lg shadow-purple-500/50"
-                  : "bg-gray-600 hover:bg-purple-400"
+                  ? "bg-gradient-to-r from-purple-400 to-pink-400 scale-125 shadow-lg shadow-purple-400/60"
+                  : "bg-gray-500 hover:bg-purple-300"
               }`}
             >
-              <div className={`absolute inset-0 rounded-full bg-white/20 animate-ping ${
+              <div className={`absolute inset-0 rounded-full bg-white/30 animate-ping ${
                 current === idx ? 'opacity-100' : 'opacity-0'
               }`} />
             </button>
@@ -322,13 +329,13 @@ const Hero = () => {
         <div className="flex gap-4">
           <button
             onClick={prevSlide}
-            className="w-12 h-12 rounded-full border border-purple-500/50 flex items-center justify-center text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300 backdrop-blur-sm"
+            className="w-12 h-12 rounded-full border border-purple-400/60 flex items-center justify-center text-purple-300 hover:bg-purple-500 hover:text-white transition-all duration-300 backdrop-blur-sm bg-black/30 shadow-lg"
           >
             ←
           </button>
           <button
             onClick={nextSlide}
-            className="w-12 h-12 rounded-full border border-purple-500/50 flex items-center justify-center text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300 backdrop-blur-sm"
+            className="w-12 h-12 rounded-full border border-purple-400/60 flex items-center justify-center text-purple-300 hover:bg-purple-500 hover:text-white transition-all duration-300 backdrop-blur-sm bg-black/30 shadow-lg"
           >
             →
           </button>
@@ -342,14 +349,14 @@ const Hero = () => {
         transition={{ delay: 2.5 }}
         className="absolute bottom-8 right-8 z-20"
       >
-        <div className="flex flex-col items-center gap-2 text-purple-400">
+        <div className="flex flex-col items-center gap-2 text-purple-300">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <Mouse className="w-6 h-6" />
+            <Mouse className="w-6 h-6 drop-shadow-lg" />
           </motion.div>
-          <div className="text-xs uppercase tracking-widest font-semibold rotate-90 origin-center translate-y-8">
+          <div className="text-xs uppercase tracking-widest font-semibold rotate-90 origin-center translate-y-8 text-gray-300">
             Scroll
           </div>
         </div>
@@ -357,7 +364,7 @@ const Hero = () => {
 
       {/* Progress Bar */}
       <motion.div
-        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-pink-500 origin-left z-30"
+        className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-pink-400 origin-left z-30 shadow-lg"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 6, ease: "linear" }}
