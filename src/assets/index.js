@@ -18,7 +18,10 @@ import image14 from "./images/image14.jpg";
 import image15 from "./images/image15.jpg";
 import image16 from "./images/image16.jpg";
 import fitness from "./images/fitness.jpg"
-// import image7 from "./images/image7.jpg";
+import fitness2 from "./images/fitness2.jpg"
+import hero from "./images/hero.jpg"
+import hero2 from "./images/hero2.png"
+import image17 from "./images/image17.jpg";
 // import image7 from "./images/image7.jpg";
 // import image7 from "./images/image7.jpg";
 // import image7 from "./images/image7.jpg";
@@ -46,9 +49,13 @@ export {
   image14,
   image15,
   image16,
+  image17,
   coach,
   josh,
   fitness,
+  fitness2,
+  hero,
+  hero2,
   video1,
   video2,
 };

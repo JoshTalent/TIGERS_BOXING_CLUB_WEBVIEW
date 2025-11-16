@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Play,
   Award,
@@ -50,13 +51,13 @@ const AboutUs = () => {
       type: "GOVERNING_BODY",
     },
     {
-      name: "Everlast",
+      name: "INDARO FOUNDATION",
       logo: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=200&auto=format&fit=crop",
       description: "Official Equipment Partner",
       type: "EQUIPMENT",
     },
     {
-      name: "Rwanda Sports Commission",
+      name: "MOLU BOXING",
       logo: "https://images.unsplash.com/photo-1551135040-5cdd5e1857b6?q=80&w=200&auto=format&fit=crop",
       description: "Sports Development Partner",
       type: "GOVERNMENT",
@@ -65,8 +66,8 @@ const AboutUs = () => {
 
   const executiveTeam = [
     {
-      name: "John Smith",
-      role: "Founder & Head Coach",
+      name: "Eric CYUBAHIRO",
+      role: "Founder & President",
       image:
         "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
       bio: "Former national boxing champion with 15+ years of coaching experience. John founded Tiger Boxing Club in 2010 with a vision to develop Rwanda's next generation of boxing champions.",
@@ -189,10 +190,10 @@ const AboutUs = () => {
               }}
             >
               <button className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Start Your Journey
+                <Link to={`/contact`}>Start Your Journey</Link>
               </button>
               <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                Book a Tour
+                <Link to={`/contact`}> Book a Tour</Link>
               </button>
             </motion.div>
           </motion.div>
@@ -271,11 +272,12 @@ const AboutUs = () => {
                   Founded by Champion, Built for Champions
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  In 2010, former national champion <strong>John Smith</strong>{" "}
-                  envisioned a space where Rwandan athletes could access
-                  world-class boxing training. What started as a small gym with
-                  one heavy bag has grown into a premier training facility that
-                  has produced multiple national champions.
+                  In 2010, former national champion{" "}
+                  <strong>Eric CYUBAHIRO</strong> envisioned a space where
+                  Rwandan athletes could access world-class boxing training.
+                  What started as a small gym with one heavy bag has grown into
+                  a premier training facility that has produced multiple
+                  national champions.
                 </p>
               </div>
 

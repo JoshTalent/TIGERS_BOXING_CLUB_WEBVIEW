@@ -13,7 +13,19 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
-import { image12, image9, image1, image13, image5, image2 , image15  ,image16, image14 } from "../../assets";
+import {
+  image12,
+  image9,
+  image1,
+  image13,
+  image5,
+  image2,
+  image15,
+  hero2,
+  image16,
+  image11,
+  image14,
+} from "../../assets";
 
 const KidsTeensBoxing = () => {
   const ageGroups = [
@@ -124,37 +136,42 @@ const KidsTeensBoxing = () => {
   const galleryImages = [
     {
       src: image12,
-      title: "Amani ",
+      title: "Amani MASENGESHO",
       desc: "Kids enjoying structured boxing games and activities",
     },
     {
       src: image9,
-      title: "C. ",
+      title: "C.  AKBAR CYIZERECYIMANA ",
       desc: "Certified coaches ensuring proper technique and safety",
     },
     {
       src: image5,
-      title: "Positive Social Interaction",
+      title: "ANGEL",
       desc: "Building friendships and teamwork skills",
     },
     {
       src: image2,
-      title: "Positive Social Interaction",
+      title: "Clarissa TURIYA",
       desc: "Building friendships and teamwork skills",
     },
     {
       src: image1,
-      title: "Positive Social Interaction",
+      title: "Valantine ",
       desc: "Building friendships and teamwork skills",
     },
     {
       src: image13,
-      title: "Positive Social Interaction",
+      title: "USHINDI",
       desc: "Building friendships and teamwork skills",
     },
     {
       src: image14,
-      title: "Positive Social Interaction",
+      title: "Gentle Albert CYUSA",
+      desc: "Building friendships and teamwork skills",
+    },
+    {
+      src: hero2,
+      title: "Yannick ISHIMWE",
       desc: "Building friendships and teamwork skills",
     },
   ];
@@ -270,7 +287,7 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src= {image16}
+                src={image16}
                 alt="Kids enjoying boxing training with coach"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
@@ -304,7 +321,7 @@ const KidsTeensBoxing = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=2070&auto=format&fit=crop"
+                src={image11}
                 alt="Group of kids having fun while training"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />

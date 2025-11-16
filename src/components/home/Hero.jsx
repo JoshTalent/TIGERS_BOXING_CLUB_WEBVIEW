@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mouse, ArrowRight, Trophy, Users, Target, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-import { image1 , image12 ,image2} from "../../assets";
+import { image1 , image12 ,image2 , hero} from "../../assets";
 
 // Enhanced slides with imported background images
 const slides = [
   {
     id: 1,
-    bg: image12, // Your imported image
+    bg: hero , // Your imported image
     title: "Elite Training Facility",
     subtitle: "World-Class Boxing Environment",
     stats: { value: "15+", label: "National Champions" }
@@ -17,6 +17,13 @@ const slides = [
   {
     id: 2,
     bg: image1, // Your imported image
+    title: "Professional Coaching",
+    subtitle: "Expert Guidance & Mentorship",
+    stats: { value: "12", label: "Years Experience" }
+  },
+  {
+    id: 2,
+    bg: image12, // Your imported image
     title: "Professional Coaching",
     subtitle: "Expert Guidance & Mentorship",
     stats: { value: "12", label: "Years Experience" }
@@ -83,7 +90,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (!isHovered) {
-      const timer = setInterval(nextSlide, 6000);
+      const timer = setInterval(nextSlide, 3000);
       return () => clearInterval(timer);
     }
   }, [isHovered]);

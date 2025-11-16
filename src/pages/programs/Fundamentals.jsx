@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { image10  ,hero} from "../../assets";
 
 const BoxingFundamentals = () => {
   const features = [
@@ -156,7 +157,7 @@ const BoxingFundamentals = () => {
                 transition={{ delay: 0.6 }}
               >
                 <motion.a
-                  href="/booking"
+                  href="/contact"
                   className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl font-semibold text-white text-center overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -226,7 +227,7 @@ const BoxingFundamentals = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=1170&auto=format&fit=crop"
+                  src= {image10}
                   alt="Boxing Training"
                   className="w-full h-full object-cover"
                 />
@@ -246,8 +247,7 @@ const BoxingFundamentals = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <img
-                  src="https://plus.unsplash.com/premium_photo-1672791843132-cea1902ad66b?q=80&w=870&auto=format&fit=crop"
-                  alt="Boxing Technique"
+                  src= {hero}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent"></div>

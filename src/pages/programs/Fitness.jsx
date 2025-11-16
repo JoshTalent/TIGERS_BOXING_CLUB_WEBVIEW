@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Music, Heart, Zap, Users, Trophy, Sparkles } from "lucide-react";
-import { fitness } from "../../assets";
+import { fitness , fitness2 , image17 } from "../../assets";
 
 const BoxingFitness = () => {
   const benefits = [
@@ -66,7 +66,7 @@ const BoxingFitness = () => {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?q=80&w=1170&auto=format&fit=crop",
+      src:image17,
       title: "Group Energy",
       desc: "High-energy classes with motivating music"
     },
@@ -76,7 +76,7 @@ const BoxingFitness = () => {
       desc: "Welcoming environment for all fitness levels"
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop",
+      src: fitness2,
       title: "Fun Atmosphere",
       desc: "Enjoyable workouts that feel like play"
     }
@@ -201,7 +201,7 @@ const BoxingFitness = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <img
-                src="https://plus.unsplash.com/premium_photo-1672791843132-cea1902ad66b?q=80&w=870&auto=format&fit=crop"
+                src={fitness2}
                 alt="Non-intimidating beginner-friendly environment"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
@@ -214,7 +214,7 @@ const BoxingFitness = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <img
-                src="https://plus.unsplash.com/premium_photo-1723759241072-50e54b13f5c4?q=80&w=2070&auto=format&fit=crop"
+                src={image17}
                 alt="Fun and engaging workout atmosphere"
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
               />
